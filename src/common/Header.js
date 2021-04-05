@@ -19,6 +19,7 @@ import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import Snackbar from '@material-ui/core/Snackbar';
+import PropTypes from 'prop-types';
 
 const customStyles = {
   content: {
@@ -71,11 +72,17 @@ const TabContainer = function (props) {
   );
 }
 
+TabContainer.propTypes = {
+    children: PropTypes.node.isRequired,
+    value: PropTypes.any.isRequired,
+    index: PropTypes.any.isRequired,
+}
 
 class Header extends Component {
   constructor() {
     super();
     this.state = {
+      dp: "",
       contactNumber: "",
       loginPassword: "",
       firstname: "",
@@ -143,6 +150,7 @@ class Header extends Component {
 
   openTabHandler = (event, value) => {
     this.setState({ value })
+    this.setState({ dp: this.state.firstname})
   }
 
   closeModalHandler = () => {
@@ -268,7 +276,7 @@ class Header extends Component {
     if (mail.match(emailRegex)) {
       this.setState({ invalidEmail: 'dispNone' });
     }
-    
+
     else {
       this.setState({ invalidEmail: 'dispBlock' });
     }
@@ -567,7 +575,7 @@ class Header extends Component {
             anchorOrigin={{ vertical: "bottom", horizontal: "center", marginBottom: '5px' }}
             transformOrigin={{ vertical: "top", horizontal: "center" }}
           >
-            <MenuItem onClick={this.openProfileHandler}>My Profile</MenuItem>
+            <MenuItem onClick={this.openProfileHandler}>My Profile</MenuItem> <br />
             <MenuItem onClick={this.logoutHandler}>Logout</MenuItem>
           </Menu>
 

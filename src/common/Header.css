@@ -7,6 +7,24 @@
     padding: 8px 32px 8px 16px;
 }
 
+@media screen and (max-width: 600px) {
+    .app-header {
+        display: flex;
+        flex-direction: column;
+        background-color: #222;
+        height: auto; 
+        width: auto; 
+        justify-content: space-evenly;
+    }
+    .search-box-container {
+        margin-top: 5%;
+        margin-bottom: 8%;
+    }
+    .logo-container {
+        margin-top: 5%;      
+    }
+}
+
 .search-box-container{
     display: flex;
     flex-direction: row;
