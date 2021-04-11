@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Header from "../../common/header/Header";
+import Header from "../../common/Header";
 import Grid from "@material-ui/core/Grid";
 import PropTypes from 'prop-types';
 import * as Utils from '../../common/Utils';
