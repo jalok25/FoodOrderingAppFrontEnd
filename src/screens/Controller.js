@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "../screens/home/Home";
-import Checkout from "./checkout/Checkout"
+import Checkout from "../screens/checkout/Checkout"
 import Details from "../screens/details/Details"
 import Profile from "../screens/profile/Profile"
 
